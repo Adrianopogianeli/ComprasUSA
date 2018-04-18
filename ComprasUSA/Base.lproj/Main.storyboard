@@ -10,31 +10,53 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Compras-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Lista de Compras-->
+        <scene sceneID="3mO-At-QtP">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ComprasViewController" customModule="ComprasUSA" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="1au-w8-LQr" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NYe-Qt-Lro">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e6Q-Br-fdl">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Lista de Compras" id="dLb-j6-hag">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Awa-RO-bLF"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Compras" image="pasta" id="ibq-DD-NAG"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LT5-U2-Uu9">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LT5-U2-Uu9" id="v2g-P2-FZb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1au-w8-LQr" id="BXL-cu-3nj"/>
+                            <outlet property="delegate" destination="1au-w8-LQr" id="NbL-f1-28x"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Lista de Compras" id="S1a-dg-bBy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="akI-DE-4bn"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xXL-hI-FUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239.19999999999999" y="303.59820089955025"/>
+            <point key="canvasLocation" x="-140" y="1071"/>
+        </scene>
+        <!--Compras-->
+        <scene sceneID="sHa-Kc-4JE">
+            <objects>
+                <navigationController id="brp-qh-v3S" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Compras" image="pasta" id="5cC-ju-rHn"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="92P-oX-fkP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1au-w8-LQr" kind="relationship" relationship="rootViewController" id="Bj7-zf-J6q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05D-mF-MUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="351"/>
         </scene>
         <!--Ajustes-->
         <scene sceneID="MLg-J4-BWJ">
@@ -64,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EaO-j9-sfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1586" y="304"/>
+            <point key="canvasLocation" x="1367" y="350"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Lry-Yp-1Od">
@@ -76,7 +98,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="oTD-GQ-MIj"/>
+                        <segue destination="brp-qh-v3S" kind="relationship" relationship="viewControllers" id="Yph-Ug-gQz"/>
                         <segue destination="gSH-1g-IHj" kind="relationship" relationship="viewControllers" id="h7U-nO-wQC"/>
                         <segue destination="HRQ-C7-EKp" kind="relationship" relationship="viewControllers" id="DML-hc-3qY"/>
                     </connections>
