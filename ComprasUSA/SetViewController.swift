@@ -1,5 +1,5 @@
 //
-//  AjustesViewController.swift
+//  UITableViewController.swift
 //  ComprasUSA
 //
 //  Created by admin on 4/17/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AjustesViewController: UIViewController {
+class SetTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
