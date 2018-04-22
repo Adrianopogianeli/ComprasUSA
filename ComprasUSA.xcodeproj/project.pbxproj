@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84A09153208BC3D6005717B5 /* ComprasUSA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84A09151208BC3D6005717B5 /* ComprasUSA.xcdatamodeld */; };
+		84A0915E208BD2F2005717B5 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84A0915D208BD2F2005717B5 /* Settings.bundle */; };
+		84A09164208BDC91005717B5 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A09163208BDC91005717B5 /* UIViewController+CoreData.swift */; };
+		84A0916A208BEC40005717B5 /* ProdutoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A09169208BEC40005717B5 /* ProdutoTableViewCell.swift */; };
 		84D2268A2089163700EED3DF /* AddProdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D226892089163700EED3DF /* AddProdViewController.swift */; };
 		84D9D36120863AAC0006DE4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9D36020863AAC0006DE4B /* AppDelegate.swift */; };
 		84D9D36320863AAC0006DE4B /* ShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9D36220863AAC0006DE4B /* ShopTableViewController.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84A09152208BC3D6005717B5 /* ComprasUSA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ComprasUSA.xcdatamodel; sourceTree = "<group>"; };
+		84A0915D208BD2F2005717B5 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		84A09163208BDC91005717B5 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
+		84A09169208BEC40005717B5 /* ProdutoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoTableViewCell.swift; sourceTree = "<group>"; };
 		84D226892089163700EED3DF /* AddProdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProdViewController.swift; sourceTree = "<group>"; };
 		84D9D35D20863AAC0006DE4B /* ComprasUSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComprasUSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D9D36020863AAC0006DE4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +49,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84A0915F208BDB7A005717B5 /* Compras */ = {
+			isa = PBXGroup;
+			children = (
+				84D226892089163700EED3DF /* AddProdViewController.swift */,
+				84D9D36220863AAC0006DE4B /* ShopTableViewController.swift */,
+				84A09169208BEC40005717B5 /* ProdutoTableViewCell.swift */,
+			);
+			path = Compras;
+			sourceTree = "<group>";
+		};
+		84A09160208BDBA0005717B5 /* Ajuste */ = {
+			isa = PBXGroup;
+			children = (
+				84D9D3722086C9BB0006DE4B /* SetViewController.swift */,
+			);
+			path = Ajuste;
+			sourceTree = "<group>";
+		};
+		84A09161208BDBE1005717B5 /* Total */ = {
+			isa = PBXGroup;
+			children = (
+				84D9D3742086C9F90006DE4B /* TotalViewController.swift */,
+			);
+			path = Total;
+			sourceTree = "<group>";
+		};
+		84A09162208BDC6C005717B5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84A09163208BDC91005717B5 /* UIViewController+CoreData.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		84D9D35420863AAC0006DE4B = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +102,17 @@
 		84D9D35F20863AAC0006DE4B /* ComprasUSA */ = {
 			isa = PBXGroup;
 			children = (
-				84D9D36020863AAC0006DE4B /* AppDelegate.swift */,
-				84D9D36220863AAC0006DE4B /* ShopTableViewController.swift */,
-				84D9D3722086C9BB0006DE4B /* SetViewController.swift */,
-				84D9D3742086C9F90006DE4B /* TotalViewController.swift */,
-				84D226892089163700EED3DF /* AddProdViewController.swift */,
+				84A09162208BDC6C005717B5 /* Extensions */,
+				84A09161208BDBE1005717B5 /* Total */,
+				84A09160208BDBA0005717B5 /* Ajuste */,
+				84A0915F208BDB7A005717B5 /* Compras */,
 				84D9D36420863AAC0006DE4B /* Main.storyboard */,
 				84D9D36720863AAE0006DE4B /* Assets.xcassets */,
 				84D9D36920863AAE0006DE4B /* LaunchScreen.storyboard */,
+				84D9D36020863AAC0006DE4B /* AppDelegate.swift */,
 				84D9D36C20863AAE0006DE4B /* Info.plist */,
+				84A09151208BC3D6005717B5 /* ComprasUSA.xcdatamodeld */,
+				84A0915D208BD2F2005717B5 /* Settings.bundle */,
 			);
 			path = ComprasUSA;
 			sourceTree = "<group>";
@@ -131,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A0915E208BD2F2005717B5 /* Settings.bundle in Resources */,
 				84D9D36B20863AAE0006DE4B /* LaunchScreen.storyboard in Resources */,
 				84D9D36820863AAE0006DE4B /* Assets.xcassets in Resources */,
 				84D9D36620863AAC0006DE4B /* Main.storyboard in Resources */,
@@ -145,8 +190,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D9D36320863AAC0006DE4B /* ShopTableViewController.swift in Sources */,
+				84A09153208BC3D6005717B5 /* ComprasUSA.xcdatamodeld in Sources */,
 				84D9D3732086C9BB0006DE4B /* SetViewController.swift in Sources */,
 				84D9D36120863AAC0006DE4B /* AppDelegate.swift in Sources */,
+				84A09164208BDC91005717B5 /* UIViewController+CoreData.swift in Sources */,
+				84A0916A208BEC40005717B5 /* ProdutoTableViewCell.swift in Sources */,
 				84D9D3752086C9F90006DE4B /* TotalViewController.swift in Sources */,
 				84D2268A2089163700EED3DF /* AddProdViewController.swift in Sources */,
 			);
@@ -344,6 +392,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84A09151208BC3D6005717B5 /* ComprasUSA.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84A09152208BC3D6005717B5 /* ComprasUSA.xcdatamodel */,
+			);
+			currentVersion = 84A09152208BC3D6005717B5 /* ComprasUSA.xcdatamodel */;
+			path = ComprasUSA.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 84D9D35520863AAC0006DE4B /* Project object */;
 }
