@@ -108,7 +108,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-kn-9QE">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-kn-9QE">
                                 <rect key="frame" x="16" y="145" width="343" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -137,6 +137,9 @@
                                 <state key="normal" title="CADASTRAR">
                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addProd:" destination="5dz-AY-pZc" eventType="touchUpInside" id="HyZ-Rh-mFH"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gEP-YL-r7y">
                                 <rect key="frame" x="16" y="283" width="289" height="30"/>
@@ -156,6 +159,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qpO-rk-6Ja"/>
                     </view>
+                    <connections>
+                        <outlet property="btAddProd" destination="24G-E6-Wxh" id="oTt-0c-nP1"/>
+                        <outlet property="ivProd" destination="ZCD-kn-9QE" id="n0f-vB-Q3k"/>
+                        <outlet property="swCartao" destination="Dhg-Zx-z4t" id="dvl-rM-bw4"/>
+                        <outlet property="tfProdName" destination="fbe-hd-alh" id="Lab-xO-OWp"/>
+                        <outlet property="tfProdSt" destination="gEP-YL-r7y" id="cPk-gL-YAm"/>
+                        <outlet property="tfProdVal" destination="0OW-qr-TIl" id="Fbh-uj-SE4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ML6-br-fRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,7 +175,7 @@
         <!--Ajustes-->
         <scene sceneID="i2U-bg-9J2">
             <objects>
-                <viewController id="Hya-DX-TgA" sceneMemberID="viewController">
+                <viewController id="Hya-DX-TgA" customClass="SetViewController" customModule="ComprasUSA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iXc-I3-Ji1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,10 +185,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TNl-1d-6QF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="TNl-1d-6QF" customClass="StateTableViewCell" customModule="ComprasUSA" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TNl-1d-6QF" id="Pb7-YN-mSp">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TNl-1d-6QF" id="Pb7-YN-mSp" customClass="StateTableViewCell" customModule="ComprasUSA" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -197,6 +208,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbImposto" destination="uMG-1D-wh1" id="Bb0-KP-gdM"/>
+                                            <outlet property="lbNome" destination="DZX-87-W18" id="6kb-hG-xpO"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -235,11 +250,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoI-Lk-jbi">
-                                <rect key="frame" x="216" y="582" width="143" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6P8-Mb-137">
+                                <rect key="frame" x="216" y="544" width="143" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
-                                <state key="normal" title="Adicionar estados"/>
+                                <state key="normal" title="Adicionar estado"/>
+                                <connections>
+                                    <action selector="btAdicionar:" destination="Hya-DX-TgA" eventType="touchUpInside" id="dwN-vO-ohy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -248,6 +265,11 @@
                     <tabBarItem key="tabBarItem" title="Ajustes" image="gear" id="Isg-Xc-Jf2"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tfCotacaoDolar" destination="T9o-fY-LI2" id="ulG-2q-6Jz"/>
+                        <outlet property="tfIofcard" destination="MIw-UB-ycA" id="jk2-L1-wOT"/>
+                        <outlet property="tvState" destination="Ikh-jL-tdo" id="KTJ-7v-B9T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rqi-dC-TTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -343,6 +365,6 @@
         <image name="pasta" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZwT-YR-wSs"/>
+        <segue reference="WOP-0F-ccH"/>
     </inferredMetricsTieBreakers>
 </document>
